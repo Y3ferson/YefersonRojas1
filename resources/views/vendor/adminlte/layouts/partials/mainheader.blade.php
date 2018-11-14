@@ -1,5 +1,5 @@
 <!-- Main Header -->
-<header class="main-header">
+<header class="main-header">        
 
     <!-- Logo -->
     <a href="{{ url('/home') }}" class="logo">
