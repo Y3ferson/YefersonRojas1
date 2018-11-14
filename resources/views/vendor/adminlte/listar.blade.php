@@ -16,6 +16,7 @@
                      Listado de productos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="{{ route('products.create') }}" class="btn btn-primary pull right">Nuevo</a>
                      </h2>
+                     @include('products.info')
                      <table class="table table-hover table-striped">
                          
                         <thead>
@@ -24,7 +25,8 @@
                                 
                                 <th width="20px"> ID</th>
                                 <th>Nombre del Producto</th>
-                                <th colspan="3">&nbsp;</th>
+                                <th colspan="2">&nbsp;</th>
+                                <th></th>
                             </tr>
                         </thead>
 
@@ -36,14 +38,21 @@
                                     {{ $products->short }}
 
                                 </td>
-                                <td> <a href="{{ route('products.show', $products->id) }}">Ver</a>
+                                <td> <a href="{{ route('products.show', $products->id) }}" class="btn btn-link"><i class="glyphicon glyphicon-eye-open" title="Mostrar"></i></a>
 
                             </td>
                                 <td>
-                                    <a href="{{ route('products.edit', $products->id) }}">Editar </a>
+                                    <a href="{{ route('products.edit', $products->id) }}" class="btn btn-link"><i class="fa fa-edit" title="Editar"></i> </a>
 
                                 </td>
-                                <td>Borrar</td>
+                                <td>
+                                    <form action="{{ route('products.destroy', $products->id) }}" method="POST">
+
+                                    {{ csrf_field() }}
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button class="btn btn-link"> <i class="fa fa-trash" title="Eliminar"></i></button>
+                                </form>
+                                </td>
 
                             </tr>
                             @endforeach
@@ -53,6 +62,9 @@
                      </table>
                     {!! $products->render !!}
 
+</div>
+<div class="col-sm-4">
+    @include('products.aside')
 </div>
                     
 <div class="main-content"> </div>

@@ -13,17 +13,18 @@
                     <div class="panel-heading">
                      <h2 class="page-header text-center">
 
-                    {{ $product->name}}
+                    Editar Producto
                     <br>
-                    <a href="{{ route('products.edit', $product->id) }}" class="btn btn-default pull-right">Editar </a>
+                    <a href="{{ route('products.index') }}" class="btn btn-default pull-right">Listado </a>
                     
                         </h2>
-<p>
-    {{ $product->short}}
 
-</p>
+                         @include('products.error')
+{!! Form::model($product, ['route' =>['products.update', $product->id], 'method' => 'PUT']) !!}
 
-{!! $product->body !!}
+@include('products.form')
+
+{!! Form::close() !!}
 
 </div>
 </div>
