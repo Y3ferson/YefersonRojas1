@@ -23,3 +23,7 @@
 
 </body>
 </html>
+ public function about()
+    {
+    	return view('about');
+    }

@@ -4,7 +4,7 @@
     {{ trans('adminlte_lang::message.home') }}
 @endsection
 
-
+<title>Listado</title>
 @section('main-content')
     <div class="container-fluid spark-screen">
         <div class="row">

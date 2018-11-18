@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 Route::resource('products','ProductController');
 
+Route::get('boton','PageController@boton')->name('boton');
+Route::get('boton/nosotros','PageController@about')->name('about');
 
 
 

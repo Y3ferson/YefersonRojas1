@@ -4,7 +4,7 @@
     {{ trans('adminlte_lang::message.home') }}
 @endsection
 
-
+<title>Editar</title>
 @section('main-content')
     <div class="container-fluid spark-screen">
         <div class="row">
@@ -20,7 +20,7 @@
                         </h2>
 
                          @include('products.error')
-{!! Form::model($product, ['route' =>['products.update', $product->id], 'method' => 'PUT']) !!}
+{!! Form::model($product, ['route' =>['products.update', $product->id], 'method' => 'PUT', 'files => true']) !!}
 
 @include('products.form')
 

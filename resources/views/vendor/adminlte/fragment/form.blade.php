@@ -14,6 +14,10 @@
 	{!! form::textarea('body', null, ['class'=> 'form-control']) !!}
 </div>
 <div class="form-group">
+	{!! form::label('file','Imagen') !!}
+	{!! form::file('file') !!}
+</div>
+<div class="form-group">
 	
 	{!! form::submit('ENVIAR', ['class'=> 'btn btn-primary']) !!}
 </div>

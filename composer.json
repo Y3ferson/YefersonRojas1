@@ -23,7 +23,10 @@
         "psr-4": {
             "Rimorsoft\\": "app/",
             "Tests\\": "tests/"
-        }
+        },
+        "files":[
+            "app/helpers.php"
+        ]
     },
     "scripts": {
         "post-root-package-install": [

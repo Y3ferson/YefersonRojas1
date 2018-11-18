@@ -40,7 +40,7 @@
                 <a href="#"><i class='fa fa-refresh'></i> <span>{{ trans('Productos') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="{{ route('products.index') }}">{{ trans('Mostrar') }}</a></li>
-
+                  <li><a href="{{ route('boton') }}">{{ trans('Boton') }}</a></li>
                    <!-- <li><a href="#">{{ trans('Mostrar') }}</a></li>-->
                 </ul>
             </li>

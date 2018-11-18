@@ -2,10 +2,8 @@
 
 @section('content')
 
-
-	<h1>
-		Pagina <strong>Home</strong>
-	</h1>
-
+<h1>
+	Pagina<strong>    Nosotros</strong>
+</h1>
 
 @endsection
